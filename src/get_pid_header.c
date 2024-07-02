@@ -295,6 +295,31 @@ uint16_t get_pid_header( uint8_t mode, uint16_t pid )
                     return SNIFF_CRUISE_CONTROL_CAN_BUTTON_HEADER;
                 #endif
 
+                #if defined(SNIFF_CRUISE_CONTROL_DIST_PLUS_BUTTON_SUPPORTED) || !defined(LIMIT_PIDS)
+                case SNIFF_CRUISE_CONTROL_DIST_PLUS_BUTTON:
+                    return SNIFF_CRUISE_CONTROL_DIST_PLUS_BUTTON_HEADER;
+                #endif
+
+                #if defined(SNIFF_CRUISE_CONTROL_DIST_MINUS_BUTTON_SUPPORTED) || !defined(LIMIT_PIDS)
+                case SNIFF_CRUISE_CONTROL_DIST_MINUS_BUTTON:
+                    return SNIFF_CRUISE_CONTROL_DIST_MINUS_BUTTON_HEADER;
+                #endif
+
+                #if defined(SNIFF_CRUISE_CONTROL_RES_PLUS_BUTTON_SUPPORTED) || !defined(LIMIT_PIDS)
+                case SNIFF_CRUISE_CONTROL_RES_PLUS_BUTTON:
+                    return SNIFF_CRUISE_CONTROL_RES_PLUS_BUTTON_HEADER;
+                #endif
+
+                #if defined(SNIFF_ESC_SPORT_MODE_BUTTON_SUPPORTED) || !defined(LIMIT_PIDS)
+                case SNIFF_ESC_SPORT_MODE_BUTTON:
+                    return SNIFF_ESC_SPORT_MODE_BUTTON_HEADER;
+                #endif
+
+                #if defined(SNIFF_ESC_OFF_MODE_BUTTON_SUPPORTED) || !defined(LIMIT_PIDS)
+                case SNIFF_ESC_OFF_MODE_BUTTON:
+                    return SNIFF_ESC_OFF_MODE_BUTTON_HEADER;
+                #endif
+
                 #if defined(SNIFF_LATERAL_ACCELERATION_SUPPORTED) || !defined(LIMIT_PIDS)
                 case SNIFF_LATERAL_ACCELERATION:
                     return SNIFF_LATERAL_ACCELERATION_HEADER;

@@ -485,6 +485,41 @@ float get_pid_value( uint8_t mode, uint16_t pid, uint8_t data[] )
                     case SNIFF_CRUISE_CONTROL_CAN_BUTTON:
                 #endif
 
+                #if defined(SNIFF_CRUISE_CONTROL_DIST_PLUS_BUTTON_SUPPORTED) || !defined(LIMIT_PIDS)
+                    #ifndef SNIFF_UNDEFINED
+                    #define SNIFF_UNDEFINED
+                    #endif
+                    case SNIFF_CRUISE_CONTROL_DIST_PLUS_BUTTON:
+                #endif
+
+                #if defined(SNIFF_CRUISE_CONTROL_DIST_MINUS_BUTTON_SUPPORTED) || !defined(LIMIT_PIDS)
+                    #ifndef SNIFF_UNDEFINED
+                    #define SNIFF_UNDEFINED
+                    #endif
+                    case SNIFF_CRUISE_CONTROL_DIST_MINUS_BUTTON:
+                #endif
+
+                #if defined(SNIFF_CRUISE_CONTROL_RES_PLUS_BUTTON_SUPPORTED) || !defined(LIMIT_PIDS)
+                    #ifndef SNIFF_UNDEFINED
+                    #define SNIFF_UNDEFINED
+                    #endif
+                    case SNIFF_CRUISE_CONTROL_RES_PLUS_BUTTON:
+                #endif
+
+                #if defined(SNIFF_ESC_SPORT_MODE_BUTTON_SUPPORTED) || !defined(LIMIT_PIDS)
+                    #ifndef SNIFF_UNDEFINED
+                    #define SNIFF_UNDEFINED
+                    #endif
+                    case SNIFF_ESC_SPORT_MODE_BUTTON:
+                #endif
+
+                #if defined(SNIFF_ESC_OFF_MODE_BUTTON_SUPPORTED) || !defined(LIMIT_PIDS)
+                    #ifndef SNIFF_UNDEFINED
+                    #define SNIFF_UNDEFINED
+                    #endif
+                    case SNIFF_ESC_OFF_MODE_BUTTON:
+                #endif
+
                 #if defined(SNIFF_LATERAL_ACCELERATION_SUPPORTED) || !defined(LIMIT_PIDS)
                     #ifndef SNIFF_UNDEFINED
                     #define SNIFF_UNDEFINED
