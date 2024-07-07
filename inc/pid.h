@@ -536,23 +536,13 @@
 #endif
 
 /**
- * ESC Off button expressed in PID_UNITS_NONE
+ * ESC button expressed in PID_UNITS_NONE
  */
-#if defined(SNIFF_ESC_SPORT_MODE_BUTTON_SUPPORTED) || !defined(LIMIT_PIDS)
-#define SNIFF_ESC_SPORT_MODE_BUTTON_HEADER                              (uint16_t)0x7E0
-#define SNIFF_ESC_SPORT_MODE_BUTTON                                     (uint16_t)0x0401
-#define SNIFF_ESC_SPORT_MODE_BUTTON_LEN                                 (uint8_t)0x0
-#define SNIFF_ESC_SPORT_MODE_BUTTON_UNITS                               (uint16_t)PID_UNITS_NONE
-#endif
-
-/**
- * ESC + TSC Off button expressed in PID_UNITS_NONE
- */
-#if defined(SNIFF_ESC_OFF_MODE_BUTTON_SUPPORTED) || !defined(LIMIT_PIDS)
-#define SNIFF_ESC_OFF_MODE_BUTTON_HEADER                                (uint16_t)0x7E0
-#define SNIFF_ESC_OFF_MODE_BUTTON                                       (uint16_t)0x0402
-#define SNIFF_ESC_OFF_MODE_BUTTON_LEN                                   (uint8_t)0x0
-#define SNIFF_ESC_OFF_MODE_BUTTON_UNITS                                 (uint16_t)PID_UNITS_NONE
+#if defined(SNIFF_ESC_BUTTON_SUPPORTED) || !defined(LIMIT_PIDS)
+#define SNIFF_ESC_BUTTON_HEADER                                         (uint16_t)0x7E0
+#define SNIFF_ESC_BUTTON                                                (uint16_t)0x0401
+#define SNIFF_ESC_BUTTON_LEN                                            (uint8_t)0x0
+#define SNIFF_ESC_BUTTON_UNITS                                          (uint16_t)PID_UNITS_NONE
 #endif
 
 /**
